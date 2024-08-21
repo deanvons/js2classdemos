@@ -1,5 +1,3 @@
-//
-
 // orange and pink red Kjetil can't see
 class Duck {
   // fields / properties
@@ -7,6 +5,7 @@ class Duck {
   #name;
   #temperament;
   #key = "ducksaregreat1234";
+  static duckObserver = "Paul";
 
   // constructor
   constructor(id, name) {
@@ -49,12 +48,33 @@ class Duck {
   #SomeSecretOperation() {
     console.log("shhhh");
   }
+
+  static MoveDucks() {
+    console.log("Move that duck!!");
+  }
 }
 
-const duck1 = new Duck(1, "sptheven");
+class Calculator {
+  static add(num1, num2) {
+    return num1 + num2;
+  }
+}
+
+Calculator.add(2, 6);
+
+// const duck1 = new Duck(1, "sptheven");
 
 const duck2 = new Duck(2, "Maximmus");
 
-// duck1.Quack();
-// duck1.SomeSecretOperation() --> won't work
-duck1.setName("SPETHEVEN!!", "ducksaregreat1234");
+// // duck1.Quack();
+// // duck1.SomeSecretOperation() --> won't work
+// duck1.setName("SPETHEVEN!!", "ducksaregreat1234");
+
+// Duck.MoveDucks()
+
+console.log(`${duck2.name}${duck2.name}`)
+
+class CodeGenerator {
+  static generateCode() {}
+}
+CodeGenerator.generateCode();
