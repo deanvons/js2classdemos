@@ -126,6 +126,18 @@ class Human {
   }
 }
 
+class Brains{
+  #id
+  weight
+  think(){
+    console.log("Thinking")
+  }
+
+}
+
+const brain = new Brains()
+
+const studObject = new Student("high", brain);
 
 class Student extends Human {
   ambition;
