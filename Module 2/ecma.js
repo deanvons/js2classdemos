@@ -50,8 +50,17 @@ function setupUser(personObjParam) {
 
 setupUser(personObj);
 
+/**
+ * Demonsterates bad practeace roff
+ * @param {string} id 
+ * @param {string} name 
+ * @param {*} weight 
+ * @param {*} height 
+ * @returns {string} An important maese
+ */
 function setupUserBad(id, name, weight, height) {
   // Using an object to encapsulate parameters
+  return "bad idea"
 }
 
 setupUserBad(perons.id, perons);
