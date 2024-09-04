@@ -16,5 +16,8 @@
   "dependencies": {
     "chart.js": "^4.4.4",
     "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
   }
 }
