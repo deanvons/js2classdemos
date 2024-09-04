@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Web pack Joke App StartedHere is some data from a module")})();
