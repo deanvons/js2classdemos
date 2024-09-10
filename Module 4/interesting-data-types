@@ -1,0 +1,117 @@
+class Queue {
+  #queueOfPeople = [];
+
+  addToQueue(ticket) {
+    // add to the end of the array
+    this.#queueOfPeople[this.#queueOfPeople.length] = ticket;
+  }
+
+  nextInLine() {
+    let nextInLine = this.#queueOfPeople[0];
+    // move the queue forward
+
+    for (let i = 0; i < this.#queueOfPeople.length; i++) {
+      this.#queueOfPeople[i] = this.#queueOfPeople[i + 1];
+    }
+
+    // return first in line
+    return nextInLine;
+  }
+}
+
+//#region using the queue
+const UDIQueue = new Queue();
+
+UDIQueue.addToQueue("A1");
+UDIQueue.addToQueue("A2");
+UDIQueue.addToQueue("A3");
+
+// console.log(UDIQueue.nextInLine());
+// console.log(UDIQueue.nextInLine());
+// console.log(UDIQueue.nextInLine());
+
+function processTicket(ticketNumber) {
+  console.log(`${ticketNumber} you are next`);
+
+  console.log("Processing...");
+
+  console.log(`${ticketNumber} you are done`);
+}
+
+// processTicket(UDIQueue.nextInLine());
+// processTicket(UDIQueue.nextInLine());
+
+class NumberPair {
+  #numb1;
+  #numb2;
+
+  constructor(numb1, numb2) {
+    this.#numb1 = numb1;
+    this.#numb2 = numb2;
+  }
+
+  total() {
+    return this.#numb1 + this.#numb2;
+  }
+}
+
+let bigNumber = 99999999999999999.983958398529837592837592837592836592873598723462347234623623462462346;
+
+console.log(bigNumber);
+
+console.log(typeof bigNumber);
+
+let bigIntNumber =
+  BigInt(
+    99999999999999999983958398529837592837592837592836592873598723462347234623623462462346
+  );
+
+console.log(typeof bigIntNumber);
+
+console.log(bigIntNumber.toString());
+
+const attendance = ["Thomas", "Present"];
+const index = ["Line", "Absent"];
+
+const attendanceMap = new Map([
+  ["Thomas", "Present"],
+  ["Line", "Absent"],
+]);
+
+console.log(attendanceMap.get("Thomas"));
+
+const ticketSet = new Set(["A1", "A2", "A1", "A4"]);
+
+ticketSet.add("A2");
+ticketSet.add("A5");
+
+console.log(ticketSet);
+
+class LinkedList {
+  startNode = {
+    value: 0,
+    nextNode: {},
+  };
+
+  add(value) {
+    if (this.startNode.value === 0) {
+      // this is the first value added
+      this.startNode.value = value;
+    }
+
+    // if we adding to the end of the list
+    const newNode = {
+      previousNode: this.startNode,
+      nodeValue: value,
+      nextNode: {},
+    };
+  }
+
+  remove() {}
+}
+
+const numberLinkedList = new LinkedList();
+
+numberLinkedList.add(5);
+numberLinkedList.add(10);
+numberLinkedList.add(2);
