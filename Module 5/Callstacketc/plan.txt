@@ -1,0 +1,4 @@
+[x] - call stack
+[x] - execution context
+[x] - heap vs stack
+[] - event loop
